@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather API</title>
+    <!-- bootstrap for minimal styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <!-- jquery for ease of example -->
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Weather API Example</h1>
+        <header class="jumbotron">
+        <p>Get your AppId and API Key through the<br><a target="_blank" href="http://www.weatherunlocked.com/products/weather-api/overview">Weather Unlocked Local Weather API</a></p>
+        <a target="_blank" class="btn btn-primary" href="https://developer.weatherunlocked.com/signup">Start Free Trial</a>
+        </header>
+        <!-- this is where we keep all the weather api interactions -->
+        <div class="weather-wrap">
+            <!-- the first h4 will display while the api loads -->
+            <h4 class="weather-loading">Loading weather...</h4>
+            <!-- the second h4 is hidden because of the hide class so we can -->
+            <!--    load information from the api into it before we show it -->
+            <h4 class="weather hide">
+                Currently: <img src="#" alt="" /><span class="description">...</span>
+            </h4>
+            <!-- TODO add a google map centered on the lat, lon returned from weatherunlocked -->
+        </div>
+    </div>
+    <!-- our weather api file -->
+    <script src="weather.js"></script>
+</body>
+</html>
